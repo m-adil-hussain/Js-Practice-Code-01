@@ -2,7 +2,7 @@ const arr = [1, 2, 3, 4, 5];
 const frtArr = ["Banana", "Apple", "Mango"];
 const newArr = new Array(5, 4, 3, 2, 1);
 
-/* console.log(arr[1]);
+console.log(arr[1]);
 console.log(arr);
 
 // ******************** ARRAY METHODS ******************** \\
@@ -27,16 +27,16 @@ console.log(arrSlice);
 const arrSplice = arr.splice(1, 4); // Ye Array Ki Sari Value Return Krta Hai Jo Method Me define Ki Gayi Ho
 console.log(arrSplice);
 
-console.log(arr); // Old Array Mai Jo Yalue Reh Jati Hai Wo Return Krta Hai */
+console.log(arr); // Old Array Mai Jo Yalue Reh Jati Hai Wo Return Krta Hai 
 
-// arr.push(frtArr);
-// console.log(arr); // ❌
+arr.push(frtArr);
+console.log(arr); // ❌
 
-// const concatArr = arr.concat(frtArr);
-// console.log(concatArr); // ✅
+const concatArr = arr.concat(frtArr);
+console.log(concatArr); // ✅
 
-// const sprdOprt = [...arr, ...frtArr];
-// console.log(sprdOprt); // ✅
+const sprdOprt = [...arr, ...frtArr];
+console.log(sprdOprt); // ✅
 
 const arrInArr = [1, 2, 3, 4, [0, 1, 2, [3, 4, 5, 6], 7, 8, 9], 5, 6, 7];
 const flatArr = arrInArr.flat(Infinity);
