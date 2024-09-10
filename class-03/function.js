@@ -54,7 +54,7 @@ console.log(result); */
 */
 
 function calculateCartPrice(val1, val2, ...cart) { // Rest Operator "..."
-    return val1, valcart;
+    return val1, val2, cart;
 }
 
 console.log(calculateCartPrice(100, 200, 300, 400, 500, 600));
