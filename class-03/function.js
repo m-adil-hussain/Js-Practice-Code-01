@@ -1,4 +1,3 @@
-/*
 function myName() {
     console.log("Muhammad");
     console.log("Adil");
@@ -31,7 +30,7 @@ function loginUserMessage(username = "Ahmed") { // Default Value
             console.log("Please Enter a Username");
             return;
         }
-    */ /*
+    */
 
     if (!username) { // Ye True Ko False Me Convert Krta Hai Aur False Ko True Mai
         console.log("Please Enter a Username");
@@ -41,11 +40,11 @@ function loginUserMessage(username = "Ahmed") { // Default Value
     return `${username} Just Logged In`;
 
 }
-
 // loginUserMessage("Adil Hussain"); ❌
 const result = loginUserMessage("Adil Hussain"); // ✅
 const result = loginUserMessage(); // Undefined
-console.log(result); */
+console.log(result);
+
 
 // ******************** REST AND SPREAD OPERATORS ******************** \\
 /* 
@@ -53,32 +52,33 @@ console.log(result); */
     *   Jb "Spread" Operator Object/Array K Sath Use Hota Hai Tu Usy Spread* Operator Khete Hai.
 */
 
+
 function calculateCartPrice(val1, val2, ...cart) { // Rest Operator "..."
     return cart;
 }
-
 console.log(calculateCartPrice(100, 200, 300, 400, 500, 600));
 // Function Mai Multiple Values Pass Krne K Liye Rest Operator Ka Use Krte Hai, Aur Ye Array [] Return Krta Hai
 
-const userObj = {
-    username: "Adil",
-    Password: "2917"
-}
 
+const userObj = { username: "Adil", Password: "2917" };
 function handleObj(anyObj) {
     console.log(`Username is ${anyObj.username} and Password is ${anyObj.Password}.`);
 }
-
-// handleObj(userObj);
-handleObj({
+handleObj(userObj); // 1st Syntax
+handleObj({ // 2nd Syntax
     username: "Adil",
     Password: "2917" 
 });
 
-const userArr = ["Adil", 200, 300, 400];
 
+const userArr = ["Adil", 200, 300, 400];
 function handleArr(anyArr) {
     console.log(`Username is ${anyArr[0]} and Course Price is ${anyArr[2]}.`);
 }
-
-handleArr(userArr)
+handleArr(userArr); // 1st Syntax
+handleArr([ // 2nd Syntax
+    "Adil",
+    200,
+    300,
+    400
+]);
