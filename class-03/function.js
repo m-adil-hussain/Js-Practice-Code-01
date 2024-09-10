@@ -54,8 +54,23 @@ console.log(result); */
 */
 
 function calculateCartPrice(val1, val2, ...cart) { // Rest Operator "..."
-    return val1, val2, cart;
+    return cart;
 }
 
 console.log(calculateCartPrice(100, 200, 300, 400, 500, 600));
 // Function Mai Multiple Values Pass Krne K Liye Rest Operator Ka Use Krte Hai, Aur Ye Array [] Return Krta Hai
+
+const user = {
+    username: "Adil",
+    Password: "2917"
+}
+
+function handleObj(anyObj) {
+    console.log(`Username is ${anyObj.username} and Password is ${anyObj.Password}.`);
+}
+
+// handleObj(user);
+handleObj({
+    username: "Adil",
+    Password: "2917" 
+});
