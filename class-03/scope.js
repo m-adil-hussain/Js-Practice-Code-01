@@ -52,4 +52,27 @@ function one() {
     */
 }
 
-one();
+//one();
+
+if (true) {
+    let username = "Adil";
+    if (username === "Adil") {
+        let email = " adil@google.com";
+        console.log(username + email);
+    }
+    // console.log(email); ❌
+}
+
+// console.log(username); ❌
+
+// addOne(5);
+function addOne(num) { // Basic Function
+    return num + 1;
+}
+addOne(5);
+
+// addTwo(5); // Hoisting* ❌
+const addTwo = function (num) { // Expression
+    return num + 2;
+}
+addTwo(5);
