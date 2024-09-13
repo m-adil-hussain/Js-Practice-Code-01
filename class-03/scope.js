@@ -1,4 +1,3 @@
-/*
 const num1 = 33;
 const num2 = 44;
 const num3 = 55;
@@ -14,7 +13,7 @@ var firstName = "Ali"; // ❌
     LOCAL SCOPE:
         Jo Bhi Code Jo {} K Andr Likha Jaye Usy Local Scope Khete Hai.
 */
-/*
+
 let lastName = "Abbasi";
 
 if(true) {
@@ -43,7 +42,7 @@ function one() {
         console.log(username);
     }
 
-    // console.log(email); // Not Access email variable
+    console.log(email); // Not Access email variable
     two();
 
     /*
@@ -52,7 +51,7 @@ function one() {
     */
 }
 
-//one();
+one();
 
 if (true) {
     let username = "Adil";
@@ -60,18 +59,18 @@ if (true) {
         let email = " adil@google.com";
         console.log(username + email);
     }
-    // console.log(email); ❌
+    console.log(email); // ❌
 }
 
-// console.log(username); ❌
+console.log(username); // ❌
 
-// addOne(5);
+addOne(5);
 function addOne(num) { // Basic Function
     return num + 1;
 }
 addOne(5);
 
-// addTwo(5); // Hoisting* ❌
+addTwo(5); // Hoisting* ❌
 const addTwo = function (num) { // Expression
     return num + 2;
 }
