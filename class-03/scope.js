@@ -1,3 +1,4 @@
+/*
 const num1 = 33;
 const num2 = 44;
 const num3 = 55;
@@ -13,6 +14,7 @@ var firstName = "Ali"; // ❌
     LOCAL SCOPE:
         Jo Bhi Code Jo {} K Andr Likha Jaye Usy Local Scope Khete Hai.
 */
+/*
 let lastName = "Abbasi";
 
 if(true) {
@@ -32,3 +34,22 @@ console.log(lastName); // Abbasi
     "WINDOWN" (GOOGLE CONSOLE) KA GLOBAL/LOCAL SCOPE ALG HAI,
     "NODE" KA BHI GLOBAL/LOCAL SCOPE ALG HAI. 
 */
+
+function one() {
+    const username = "Adil";
+
+    function two() {
+        const email = "adil@google.com";
+        console.log(username);
+    }
+
+    // console.log(email); // Not Access email variable
+    two();
+
+    /*
+        Child Function Apne Parent Function K Variable Ko Access Kr Sakte Hai,
+        Parent Function Apne Child Function K Variable Ko Access Nahi Kr Sakte.
+    */
+}
+
+one();
