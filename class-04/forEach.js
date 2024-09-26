@@ -36,3 +36,14 @@ const arrObj = [
 arrObj.forEach((val) => {
     console.log(val.name, val.fatherName);
 });
+
+const result = coding.forEach((item) => {
+    console.log(item);
+    return item;
+});
+
+console.log(result); // Undefined
+
+/*
+    * ForEach Loop Koi Bhi Value Return Nahi Krta.
+*/
