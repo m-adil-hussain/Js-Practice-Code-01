@@ -1,3 +1,4 @@
+// ******************** NEW & THIS KEYWORD ******************** \\
 const user = {
     username: 'Adil Hussain',
     email: 'adil@google.com',
@@ -30,6 +31,7 @@ console.log(multiplyByFive(5));
 console.log(multiplyByFive.power = 2);
 console.log(multiplyByFive.prototype);
 
+// ******************** PROTOTYPE ******************** \\
 
 const createUser = function (username, score) {
     this.username = username;
@@ -48,3 +50,44 @@ const user3 = new createUser('Adil', 25);
 user3.increment();
 user3.printMe();
 
+const myHeros = ['SpiderMan', 'SuperMan', 'BatMan'];
+const heroPowers = {
+    spiderman: 'Spider Power',
+    superman: 'Super Power',
+    batman: 'Bat Power'
+}
+
+Object.prototype.myObjFun = function () {
+    console.log('myObjectFunction is Present in All Objects...!');
+}
+
+Array.prototype.myArrFun = function () {
+    console.log('myArrayFunction is Present in All Array...!');
+}
+
+myHeros.myObjFun();
+heroPowers.myObjFun();
+myHeros.myArrFun();
+// heroPowers.myArrFun(); ❌
+
+// ******************** INHERITANCE ******************** \\
+
+const user4 = {
+    name: 'Adil Hussain',
+    email: 'adil@github.com'
+}
+
+const teacher = {
+    subject: 'English',
+    class: '12th'
+}
+
+const teachingSupport = {
+    makeAssignment: 'JS Assignment',
+    fullTime: true,
+    __proto__: teacher
+}
+
+teacher.__proto__ = user4;
+// modern syntax
+teacher.setPrototypeOf(user4, teacher);
