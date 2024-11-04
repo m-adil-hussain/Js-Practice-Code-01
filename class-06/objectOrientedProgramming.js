@@ -21,3 +21,30 @@ const user1 = new userOne('Adil Hussain', 'adil@gmail.com', '223344');
 const user2 = new userOne('Ahmed Raza', 'ahmed@gmail.com', '556677');
 console.log(user1);
 console.log(user2);
+
+const multiplyByFive = function (num) {
+    return num * 5;
+}
+
+console.log(multiplyByFive(5));
+console.log(multiplyByFive.power = 2);
+console.log(multiplyByFive.prototype);
+
+
+const createUser = function (username, score) {
+    this.username = username;
+    this.score = score;
+}
+
+createUser.prototype.increment = function () {
+    this.score++;
+}
+
+createUser.prototype.printMe = function () {
+    console.log(`${this.username} your Score is: ${this.score}`);
+}
+
+const user3 = new createUser('Adil', 25);
+user3.increment();
+user3.printMe();
+
