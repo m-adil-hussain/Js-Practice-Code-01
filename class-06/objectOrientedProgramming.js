@@ -2,15 +2,15 @@ const user = {
     username: 'Adil Hussain',
     email: 'adil@google.com',
     password: '876543210',
-    getUserID: () => {
-        console.log('Adil Hussain (56423)');
+    getUserID: function() {
+        console.log(`${this.username} (56423)`);
     }
 }
 
 console.log(user.username);
 console.log(user.getUserID());
 
-const userOne = (username, email, password) => {
+const userOne = function(username, email, password) {
     this.username = username;
     this.email = email;
     this.password = password;
