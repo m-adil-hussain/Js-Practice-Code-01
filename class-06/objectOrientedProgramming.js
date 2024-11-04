@@ -1,5 +1,5 @@
 // ******************** NEW & THIS KEYWORD ******************** \\
-/*const user = {
+const user = {
     username: 'Adil Hussain',
     email: 'adil@google.com',
     password: '876543210',
@@ -90,7 +90,7 @@ const teachingSupport = {
 
 teacher.__proto__ = user4;
 // modern syntax
-teacher.setPrototypeOf(user4, teacher);*/
+teacher.setPrototypeOf(user4, teacher);
 
 // ******************** PRACTICE ******************** \\
 
