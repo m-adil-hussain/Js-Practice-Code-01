@@ -1,4 +1,5 @@
 // ******************** NEW & THIS KEYWORD ******************** \\
+
 const user = {
     username: 'Adil Hussain',
     email: 'adil@google.com',
@@ -102,3 +103,79 @@ String.prototype.trueLength = function () {
 
 name.trueLength();
 'Ahmed Raza    '.trueLength();
+
+// ******************** JAVASCRIPT CLASSES ******************** \\
+
+class User {
+    constructor(username, email, password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+    }
+
+    securePassFun() {
+        return `||@${this.password}//!`;
+    }
+}
+
+const newUser = new User('adil', 'adil@gmail.com', 445566);
+console.log(newUser.securePassFun());
+
+class User2 {
+    constructor(username) {
+        this.username = username;
+    }
+
+    logMe() {
+        console.log(`username is ${this.username}`);
+    }
+}
+
+class Teacher extends User2 {
+    constructor(username, email, password) {
+        super(username);
+        this.email = email;
+        this.password = password;
+    }
+
+    course() {
+        console.log(`new course added by ${this.username}`);
+    }
+}
+
+const newTeacher = new Teacher('adil', 'adil@gmail.com', 123);
+const newUser2 = new User2('hussain', 'hussain@gmail.com', 321);
+
+console.log(newTeacher.course());
+console.log(newUser2.logMe());
+
+console.log(newTeacher === newUser2);
+console.log(newTeacher instanceof User);
+
+class user3 {
+    constructor(username) {
+        this.username = username;
+    }
+
+    logMe() {
+        console.log(`username is ${this.username}`);
+    }
+
+    static createID() {
+        return `123_`;
+    }
+}
+
+const newUser3 = new user3('Adil');
+console.log(newUser3.createID());
+
+class Teacher2 extends user3 {
+    constructor(username, email, password) {
+        super(username);
+        this.email = email;
+        this.password = password;
+    }
+}
+
+const newTeacher2 = new Teacher2('adil', 'adil@google.com', 123);
+console.log(newTeacher2.createID());
