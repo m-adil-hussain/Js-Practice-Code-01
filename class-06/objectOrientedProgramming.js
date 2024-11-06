@@ -179,3 +179,23 @@ class Teacher2 extends user3 {
 
 const newTeacher2 = new Teacher2('adil', 'adil@google.com', 123);
 console.log(newTeacher2.createID());
+
+// ******************** GETTER & SETTER ******************** \\
+
+class user5 {
+    constructor(username, email) {
+        this.username = username;
+        this.email = email;
+    }
+
+    get username() {
+        return this._username.toUpperCase();
+    }
+
+    set username(value) {
+        this._username = value;
+    }
+}
+
+const newUser5 = new user5('Adil', 'adil@gmail.com');
+console.log(newUser5.username);
