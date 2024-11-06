@@ -199,3 +199,20 @@ class user5 {
 
 const newUser5 = new user5('Adil', 'adil@gmail.com');
 console.log(newUser5.username);
+
+function User6(email, pass) {
+    this.email = email;
+    this.pass = pass;
+
+    Object.defineProperty(this, 'email', {
+        get: function() {
+            return this._email.toUpperCase();
+        },
+        set: function(value) {
+            this._email = value;
+        }
+    });
+}
+
+const newUser6 = new User6('adil@gmail.com', 'adil');
+console.log(newUser6.email);
